@@ -5,32 +5,34 @@ import requests
 
 url = "https://httpbin.org/"
 
+def mostrar_solicitud():
+	print(solicitud.text)
+
 # POST
 
-r = requests.post(url + "post", data  = {"key": "value"})
-print(r.text)
+solicitud = requests.post(url + "post", data  = {"key": "value"})
+mostrar_solicitud()
 
 # GET
 
-r = requests.get("https://api.github.com/events")
-print(r.text)
+solicitud = requests.get("https://api.github.com/events")
+mostrar_solicitud()
 
 # DELETE
 
-r = requests.delete(url + "delete")
-print(r.text)
+solicitud = requests.delete(url + "delete")
+mostrar_solicitud()
 
 # PUT
 
-r = requests.put(url + "put", data = {"key": "value"})
-print(r.text)
-
+solicitud = requests.put(url + "put", data = {"key": "value"})
+mostrar_solicitud()
 # HEAD
 
-r = requests.head(url + "get")
-print(r.text)
+solicitud = requests.head(url + "get")
+mostrar_solicitud()
 
 # OPTIONS
 
-r = requests.options(url + "get")
-print(r.text)
+solicitud = requests.options(url + "get")
+mostrar_solicitud()

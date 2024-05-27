@@ -1,8 +1,7 @@
 
-# Obtener los datos
-# en formato json
+# Obtener los datos en formato json
 
 import requests
 
-r = requests.get("https://api.github.com/events")
-print(r.json())
+solicitud = requests.get("https://api.github.com/events")
+print(solicitud.json())

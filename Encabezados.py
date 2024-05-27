@@ -6,5 +6,5 @@ encabezados = {"user-agent": "my-app/0.0.1"}
 
 # Crear solicitud
 
-r = requests.get(url, headers = encabezados)
-print(r.content)
+solicitud = requests.get(url, headers = encabezados)
+print(solicitud.content)
